@@ -245,7 +245,7 @@ Essas descrições servirão como base para os desenhos das telas em papel, Figm
 
 ### 9.1. Repositório
 
-**Link do GitHub:** [Inserir o endereço do repositório da equipe]
+**Link do GitHub:** (https://github.com/DOOM6003/projeto-site-ods)
 
 O repositório deverá conter um `README.md` com a apresentação do projeto, os integrantes, a ODS e as metas relacionadas, as funcionalidades previstas, as instruções para executar o protótipo e o cronograma.
 
