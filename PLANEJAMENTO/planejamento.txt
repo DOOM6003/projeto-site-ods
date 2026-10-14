@@ -1,0 +1,28 @@
+# Planejamento do Projeto — Site ODS
+
+## Sprint 1 — Definição e planejamento do projeto
+
+**Objetivo:** definir o problema que o site pretende abordar, seu público-alvo e a proposta de solução.
+
+**Atividades:**
+- Escolher a ODS e a meta específica relacionada ao projeto.
+- Definir o tema, o problema e a justificativa do site.
+- Pesquisar informações e dados em fontes confiáveis.
+- Identificar o público-alvo e suas necessidades.
+- Definir os objetivos geral e específicos.
+- Criar o repositório do projeto no GitHub.
+- Elaborar o README.md inicial.
+
+**Entregas:**
+- Definição do tema e do problema.
+- Justificativa fundamentada em fontes confiáveis.
+- Objetivos e público-alvo definidos.
+- Repositório criado e documentação inicial.
+
+## Sprint 2 — Organização e prototipação
+
+**Objetivo:** planejar a estrutura do site e definir sua organização visual e técnica.
+
+**Atividades:**
+- Definir as páginas e seções que comporão o site.
+- Elaborar o mapa de nave
