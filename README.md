@@ -27,5 +27,7 @@ Autores
 Projeto desenvolvido pelos alunos:
 - João Gabriel Papini
 - Pietro Granzoto do Vale
+
 Disciplina: Desenvolvimento Web
+
 Tema: Igualdade de gênero — ODS 5
