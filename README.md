@@ -5,7 +5,7 @@
 ## 1. Identificação
 
 * **Título do projeto:** Voz Delas: plataforma de denúncias contra a discriminação de gênero.
-* **Nome do(s) estudante(s):** [Inserir nome(s)].
+* **Nome do(s) estudante(s):** Pietro Granzotto, João Gabriel Papini.
 * **ODS escolhido:** ODS 5 — Igualdade de Gênero.
 * **Tecnologias previstas:** HTML, CSS e JavaScript.
 
