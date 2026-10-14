@@ -1,28 +1,102 @@
-# Planejamento do Projeto — Site ODS
+PLANEJAMENTO GERAL — VOZ DELAS
 
-## Sprint 1 — Definição e planejamento do projeto
+1. IDENTIFICAÇÃO
 
-**Objetivo:** definir o problema que o site pretende abordar, seu público-alvo e a proposta de solução.
+Título: Voz Delas — Plataforma de Denúncias contra a Discriminação de Gênero.
 
-**Atividades:**
-- Escolher a ODS e a meta específica relacionada ao projeto.
-- Definir o tema, o problema e a justificativa do site.
-- Pesquisar informações e dados em fontes confiáveis.
-- Identificar o público-alvo e suas necessidades.
-- Definir os objetivos geral e específicos.
-- Criar o repositório do projeto no GitHub.
-- Elaborar o README.md inicial.
+ODS escolhida: ODS 5 — Igualdade de gênero.
 
-**Entregas:**
-- Definição do tema e do problema.
-- Justificativa fundamentada em fontes confiáveis.
-- Objetivos e público-alvo definidos.
-- Repositório criado e documentação inicial.
+Meta principal: 5.1 — Eliminar a discriminação contra mulheres e meninas.
 
-## Sprint 2 — Organização e prototipação
+2. PROBLEMA
 
-**Objetivo:** planejar a estrutura do site e definir sua organização visual e técnica.
+O projeto aborda situações de preconceito, discriminação e assédio contra mulheres em empresas, instituições, espaços públicos, ambientes digitais e relações pessoais.
 
-**Atividades:**
-- Definir as páginas e seções que comporão o site.
-- Elaborar o mapa de nave
+Também considera as dificuldades relacionadas ao registro de ocorrências, ao acesso a orientações confiáveis e ao acompanhamento das providências adotadas.
+
+3. JUSTIFICATIVA
+
+A desigualdade de gênero afeta a autonomia, a segurança e as oportunidades das mulheres. Dados apresentados pelo IBGE demonstram diferenças de rendimento e de participação em cargos gerenciais.
+
+A proposta do Voz Delas é reunir informações educativas, permitir o registro demonstrativo de relatos e apresentar mecanismos de consulta e acompanhamento.
+
+A plataforma pretende complementar a divulgação dos canais oficiais de atendimento, sem substituir os serviços públicos existentes.
+
+4. OBJETIVO GERAL
+
+Desenvolver um protótipo de plataforma digital para registrar denúncias anônimas de discriminação de gênero, disponibilizar orientações e demonstrar um fluxo de análise e acompanhamento.
+
+5. OBJETIVOS ESPECÍFICOS
+
+- Disponibilizar um formulário para registrar informações sobre as ocorrências.
+- Demonstrar o acompanhamento reservado por código e chave de acesso.
+- Implementar filtros para consultar empresas, categorias e situações de atendimento.
+- Apresentar informações sobre direitos das mulheres e canais oficiais.
+- Desenvolver uma interface acessível para computadores e celulares.
+
+6. PÚBLICO-ALVO
+
+O público principal é composto por mulheres que vivenciam preconceito, discriminação ou assédio. A plataforma também poderá ser consultada por testemunhas e profissionais envolvidos no acolhimento e na análise de relatos.
+
+7. ESTRUTURA DO SITE
+
+- Início: apresentação do projeto e acesso às funções principais.
+- Registrar denúncia: formulário para descrição da ocorrência.
+- Acompanhar registro: consulta por código e chave de acesso.
+- Empresas e denúncias: painel com filtros e indicadores.
+- Seus direitos: conteúdos educativos.
+- Onde buscar ajuda: canais oficiais de atendimento.
+- Como funciona: explicação sobre registro, análise e acompanhamento.
+- Privacidade e termos de uso: informações sobre proteção de dados.
+- Área administrativa: demonstração da classificação e atualização dos registros.
+
+8. FUNCIONALIDADES OBRIGATÓRIAS
+
+- Navegação entre páginas.
+- Interface adaptável a diferentes tamanhos de tela.
+- Formulário sem exigência de nome, CPF ou e-mail da denunciante.
+- Validação dos campos necessários.
+- Geração demonstrativa de código e chave de acompanhamento.
+- Consulta do andamento utilizando dados fictícios.
+- Filtros por empresa, tipo de denúncia, quantidade e situação.
+- Indicadores de registros atendidos e pendentes.
+- Área administrativa demonstrativa.
+- Conteúdos educativos com referências e links oficiais.
+- Recursos básicos de acessibilidade.
+
+9. FUNCIONALIDADES DESEJÁVEIS
+
+- Envio protegido de documentos.
+- Comunicação reservada para complementação de informações.
+- Relatórios estatísticos por período e região.
+- Busca de serviços de atendimento por município.
+- Integração com sistemas públicos, mediante autorização institucional.
+- Botão de saída rápida da página.
+
+10. IDENTIDADE VISUAL
+
+A interface utilizará branco e tonalidades de rosa, com predominância do rosa mais escuro definido na paleta visual. O design deverá apresentar linguagem simples, organização clara e contraste adequado.
+
+11. TECNOLOGIAS
+
+HTML para estruturação das páginas, CSS para os estilos visuais e JavaScript para validações, filtros e interações demonstrativas.
+
+12. PRIVACIDADE E RESPONSABILIDADE
+
+O protótipo utilizará dados fictícios. Uma versão operacional exigirá infraestrutura protegida, controle de acesso, tratamento adequado dos dados pessoais, profissionais capacitados e parcerias institucionais.
+
+Os relatos deverão ser apresentados como denúncias em análise, sem atribuição automática de culpa. Eventuais investigações e responsabilizações caberão às autoridades competentes.
+
+13. CRONOGRAMA
+
+Sprint 1: concepção e planejamento do projeto.
+
+Sprint 2: organização técnica, prototipação e primeira versão navegável.
+
+Sprint 3: implementação das funcionalidades demonstrativas, testes e correções.
+
+14. REFERÊNCIAS INICIAIS
+
+IBGE; Senado Federal; Ministério das Mulheres; Nações Unidas Brasil; legislação brasileira sobre proteção de dados pessoais.
+
+As referências completas deverão ser registradas conforme as normas da ABNT.
