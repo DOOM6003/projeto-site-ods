@@ -259,7 +259,6 @@ O protótipo será desenvolvido utilizando:
 
 ### 9.3. Estrutura de Pastas
 
-```text
 voz-delas/
 ├── README.md
 ├── index.html
@@ -269,7 +268,6 @@ voz-delas/
 ├── assets/
 ├── data/
 └── docs/
-```
 
 | Arquivo ou pasta | Finalidade                                      |
 | ---------------- | ----------------------------------------------- |
