@@ -1,58 +1,40 @@
-SPRINT 1 — CONCEPÇÃO DO PROJETO
+SPRINT 1 - VOZ DELAS
 
-PROJETO: VOZ DELAS
-
-1. OBJETIVO
+-> OBJETIVO
 
 Definir a proposta do Voz Delas, identificando o problema abordado, o público-alvo, os objetivos, as funcionalidades e a relação com os Objetivos de Desenvolvimento Sustentável.
 
-2. ATIVIDADES
+-> ATIVIDADES
 
-2.1. Identificação do problema
 - Identificar situações de preconceito, discriminação e assédio contra mulheres.
 - Considerar as dificuldades para registrar relatos e acompanhar providências.
-
-2.2. Pesquisa e contextualização
 - Pesquisar dados e informações em fontes confiáveis.
 - Consultar materiais do IBGE, Senado Federal, Ministério das Mulheres e Nações Unidas Brasil.
-- Relacionar as evidências encontradas às funcionalidades propostas.
-
-2.3. Definição dos objetivos
 - Estabelecer o objetivo geral e os objetivos específicos.
 - Definir o público-alvo e suas principais necessidades.
-- Relacionar o projeto à ODS 5, especialmente à meta 5.1.
-
-2.4. Planejamento das funcionalidades
+- Relacionar o projeto à ODS 5, no caso, a meta 5.1.
 - Definir o formulário de denúncias anônimas.
-- Planejar o acompanhamento por código e chave de acesso.
-- Definir o painel de empresas e denúncias.
 - Planejar os conteúdos educativos e os canais oficiais de atendimento.
-- Definir a área administrativa demonstrativa.
-
-2.5. Planejamento técnico
 - Definir HTML, CSS e JavaScript como tecnologias previstas.
 - Criar o repositório do projeto no GitHub.
-- Organizar os arquivos de planejamento e documentação.
 - Definir a identidade visual com tons de rosa e branco.
 
-3. ENTREGAS PREVISTAS
+-> ENTREGAS PREVISTAS
 
 - Problema e justificativa definidos.
 - Objetivos e público-alvo identificados.
 - Funcionalidades principais especificadas.
 - Relação com a ODS 5 estabelecida.
-- Repositório criado e documentação inicial organizada.
+- Repositório criado.
 
-4. RESULTADO ESPERADO
+-> RESULTADO ESPERADO
 
-Obter uma definição clara do Voz Delas, estabelecendo a base conceitual e técnica para a prototipação e o desenvolvimento.
+Obter uma definição clara do "Voz Delas", estabelecendo a base conceitual e técnica para a prototipação e o desenvolvimento.
 
-5. STATUS
+-> STATUS
 
-[Preencher conforme o andamento real da equipe.]
+Concluído
 
-6. OBSERVAÇÕES
+-> OBSERVAÇÕES
 
-[Registrar decisões, dificuldades e alterações realizadas durante a Sprint.]
-
-PARA MAIS INFORMAÇÕES, ACESSE: https://docs.google.com/document/d/1VSLSjhvXT3SPj_EJJegZ1YiN9-R7NTOzpL_q8GtcLyw/edit?usp=sharing
+Usar o GitHub é muito complicado.
