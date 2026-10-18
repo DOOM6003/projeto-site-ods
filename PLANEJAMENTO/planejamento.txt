@@ -1,93 +1,58 @@
-PLANEJAMENTO GERAL — VOZ DELAS
+Planejamento do projeto
 
-1. IDENTIFICAÇÃO
-
-Título: Voz Delas — Plataforma de Denúncias contra a Discriminação de Gênero.
+Título: Voz Delas (Plataforma de Denúncias contra a Discriminação de Gênero.)
 
 ODS escolhida: ODS 5 — Igualdade de gênero.
 
 Meta principal: 5.1 — Eliminar a discriminação contra mulheres e meninas.
 
-2. PROBLEMA
+-> Abordagem
 
-O projeto aborda situações de preconceito, discriminação e assédio contra mulheres em empresas, instituições, espaços públicos, ambientes digitais e relações pessoais.
+O projeto aborda situações de preconceito, discriminação e assédio contra mulheres em empresas, instituições, espaços públicos, ambientes digitais e relações pessoais. Também considera as dificuldades relacionadas ao registro de ocorrências, ao acesso a orientações confiáveis e ao acompanhamento das providências adotadas.
 
-Também considera as dificuldades relacionadas ao registro de ocorrências, ao acesso a orientações confiáveis e ao acompanhamento das providências adotadas.
+-> Mas já não existem canais apropriados?
 
-3. JUSTIFICATIVA
+A proposta do Voz Delas é reunir informações educativas, permitir o registro demonstrativo de relatos e apresentar mecanismos de consulta e acompanhamento. A plataforma pretende complementar a divulgação dos canais oficiais de atendimento, sem substituir os serviços públicos existentes.
 
-A desigualdade de gênero afeta a autonomia, a segurança e as oportunidades das mulheres. Dados apresentados pelo IBGE demonstram diferenças de rendimento e de participação em cargos gerenciais.
+-> Objetivos:
 
-A proposta do Voz Delas é reunir informações educativas, permitir o registro demonstrativo de relatos e apresentar mecanismos de consulta e acompanhamento.
+OBJETIVO GERAL
 
-A plataforma pretende complementar a divulgação dos canais oficiais de atendimento, sem substituir os serviços públicos existentes.
+- Desenvolver um protótipo de plataforma digital para registrar denúncias anônimas de discriminação de gênero, disponibilizar orientações e demonstrar um fluxo de análise e acompanhamento.
 
-4. OBJETIVO GERAL
-
-Desenvolver um protótipo de plataforma digital para registrar denúncias anônimas de discriminação de gênero, disponibilizar orientações e demonstrar um fluxo de análise e acompanhamento.
-
-5. OBJETIVOS ESPECÍFICOS
+OBJETIVOS ESPECÍFICOS
 
 - Disponibilizar um formulário para registrar informações sobre as ocorrências.
-- Demonstrar o acompanhamento reservado por código e chave de acesso.
-- Implementar filtros para consultar empresas, categorias e situações de atendimento.
-- Apresentar informações sobre direitos das mulheres e canais oficiais.
+- Trazer anonimato para as denúncias
+- Apresentar informações sobre direitos das mulheres e canais oficiais, juntamente com exemplos de situações de discriminação, com o objetivo de conscientizar.
 - Desenvolver uma interface acessível para computadores e celulares.
 
-6. PÚBLICO-ALVO
+-> Quem é o público alvo?
 
-O público principal é composto por mulheres que vivenciam preconceito, discriminação ou assédio. A plataforma também poderá ser consultada por testemunhas e profissionais envolvidos no acolhimento e na análise de relatos.
+O público alvo são mulheres que vivenciam preconceito, discriminação ou assédio.
 
-7. ESTRUTURA DO SITE
+-> Como é a estrutura do site?
 
 - Início: apresentação do projeto e acesso às funções principais.
 - Registrar denúncia: formulário para descrição da ocorrência.
-- Acompanhar registro: consulta por código e chave de acesso.
-- Empresas e denúncias: painel com filtros e indicadores.
 - Seus direitos: conteúdos educativos.
 - Onde buscar ajuda: canais oficiais de atendimento.
 - Como funciona: explicação sobre registro, análise e acompanhamento.
 - Privacidade e termos de uso: informações sobre proteção de dados.
-- Área administrativa: demonstração da classificação e atualização dos registros.
 
-8. FUNCIONALIDADES OBRIGATÓRIAS
-
-- Navegação entre páginas.
-- Interface adaptável a diferentes tamanhos de tela.
-- Formulário sem exigência de nome, CPF ou e-mail da denunciante.
-- Validação dos campos necessários.
-- Geração demonstrativa de código e chave de acompanhamento.
-- Consulta do andamento utilizando dados fictícios.
-- Filtros por empresa, tipo de denúncia, quantidade e situação.
-- Indicadores de registros atendidos e pendentes.
-- Área administrativa demonstrativa.
-- Conteúdos educativos com referências e links oficiais.
-- Recursos básicos de acessibilidade.
-
-9. FUNCIONALIDADES DESEJÁVEIS
-
-- Envio protegido de documentos.
-- Comunicação reservada para complementação de informações.
-- Relatórios estatísticos por período e região.
-- Busca de serviços de atendimento por município.
-- Integração com sistemas públicos, mediante autorização institucional.
-- Botão de saída rápida da página.
-
-10. IDENTIDADE VISUAL
+-> Como será a estética?
 
 A interface utilizará branco e tonalidades de rosa, com predominância do rosa mais escuro definido na paleta visual. O design deverá apresentar linguagem simples, organização clara e contraste adequado.
 
-11. TECNOLOGIAS
+-> Como será feito?
 
-HTML para estruturação das páginas, CSS para os estilos visuais e JavaScript para validações, filtros e interações demonstrativas.
+Usando HTML para estruturação das páginas, CSS para os estilos visuais e JavaScript para validações, filtros e interações demonstrativas.
 
-12. PRIVACIDADE E RESPONSABILIDADE
+-> Informações adicionais
 
-O protótipo utilizará dados fictícios. Uma versão operacional exigirá infraestrutura protegida, controle de acesso, tratamento adequado dos dados pessoais, profissionais capacitados e parcerias institucionais.
+O protótipo utilizará dados fictícios. Uma versão operacional exigirá infraestrutura protegida, controle de acesso, tratamento adequado dos dados pessoais, profissionais capacitados e parcerias institucionais. 
 
-Os relatos deverão ser apresentados como denúncias em análise, sem atribuição automática de culpa. Eventuais investigações e responsabilizações caberão às autoridades competentes.
-
-13. CRONOGRAMA
+CRONOGRAMA
 
 Sprint 1: concepção e planejamento do projeto.
 
