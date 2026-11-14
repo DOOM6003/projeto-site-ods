@@ -1,12 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/output.css">
+    <meta name="description" content="Entre na sua conta do Voz Delas para acompanhar suas denúncias com segurança.">
+    <title>Entrar | Voz Delas</title>
+    <link rel="stylesheet" href="./css/login.css">
 </head>
 <body>
-    
+
+    <!-- Cabeçalho -->
+    <header class="topo">
+        <a href="index.html" class="logo" aria-label="Voz Delas - página inicial">
+            <span class="logo-icone" aria-hidden="true">♀</span>
+            <span class="logo-texto">Voz <strong>Delas</strong></span>
+        </a>
+        <nav class="menu" aria-label="Navegação principal">
+            <a href="index.html">Início</a>
+            <a href="#">Seus direitos</a>
+            <a href="#">Onde buscar ajuda</a>
+            <a href="#">Como funciona</a>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+
+        <!-- Painel de boas-vindas -->
+        <section class="painel-boas-vindas" aria-labelledby="titulo-boas-vindas">
+            <h1 id="titulo-boas-vindas">Sua voz importa.</h1>
+            <p>
+                Entre na sua conta para acompanhar o andamento das suas denúncias
+                em um ambiente seguro e acolhedor.
+            </p>
+            <ul class="beneficios">
+                <li>Suas informações ficam visíveis apenas para a equipe administradora.</li>
+                <li>Acompanhe se a sua denúncia já foi atendida.</li>
+                <li>Acesse conteúdos sobre seus direitos.</li>
+            </ul>
+        </section>
+
+        <!-- Cartão de login -->
+        <section class="cartao-login" aria-labelledby="titulo-login">
+            <h2 id="titulo-login">Entrar</h2>
+            <p class="subtitulo">Bem-vinda de volta! Preencha seus dados abaixo.</p>
+
+            <!-- Protótipo: o formulário ainda não está ligado a um servidor -->
+            <form class="formulario" action="#" method="post">
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seuemail@exemplo.com"
+                        autocomplete="email"
+                        required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        minlength="6"
+                        required>
+                </div>
+
+                <div class="opcoes">
+                    <label class="lembrar">
+                        <input type="checkbox" name="lembrar">
+                        <span>Lembrar de mim</span>
+                    </label>
+                    <a href="#" class="link">Esqueci minha senha</a>
+                </div>
+
+                <button type="submit" class="botao botao-principal">Entrar</button>
+            </form>
+
+            <p class="cadastro">
+                Ainda não tem conta? <a href="#" class="link">Cadastre-se</a>
+            </p>
+
+            <div class="divisor" role="separator"><span>ou</span></div>
+
+            <!-- Caminho para quem não quer se identificar -->
+            <div class="anonimo">
+                <p>Prefere não se identificar?</p>
+                <a href="#" class="botao botao-secundario">Fazer denúncia anônima</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>
+            Em situação de violência, ligue <strong>180</strong> (Central de Atendimento à Mulher)
+            ou <strong>190</strong> em caso de emergência.
+        </p>
+        <p class="rodape-pequeno">
+            Voz Delas &middot; Projeto acadêmico alinhado à ODS 5 &mdash; Igualdade de Gênero
+            &middot; <a href="#">Privacidade e termos de uso</a>
+        </p>
+    </footer>
+
 </body>
 </html>
