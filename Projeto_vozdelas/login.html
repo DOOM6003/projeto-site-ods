@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre na sua conta do Voz Delas para acompanhar suas denúncias com segurança.">
+    <title>Entrar | Voz Delas</title>
+    <link rel="stylesheet" href="./css/output.css">
+</head>
+<body class="flex min-h-screen flex-col font-sans leading-normal text-texto fundo-rosa">
+
+    <!-- Cabeçalho -->
+    <header class="flex flex-wrap items-center justify-center gap-3 bg-white px-4 py-3.5 shadow-topo sm:justify-between sm:px-[5%] sm:py-4">
+        <a href="index.html" class="flex items-center gap-2.5 text-2xl/normal text-rosa-escuro" aria-label="Voz Delas - página inicial">
+            <!-- A imagem tem bastante margem em branco; o zoom (scale-150) recorta essa sobra -->
+            <span class="block size-12 overflow-hidden" aria-hidden="true">
+                <img src="./img/logo.png" alt="" class="block size-full scale-150 object-cover">
+            </span>
+            <span>Voz <strong>Delas</strong></span>
+        </a>
+        <nav class="flex flex-wrap justify-center gap-3.5 text-[0.9rem] sm:justify-start sm:gap-5 sm:text-base" aria-label="Navegação principal">
+            <a href="index.html" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Início</a>
+            <a href="index.html#direitos" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Seus direitos</a>
+            <a href="index.html#ajuda" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Onde buscar ajuda</a>
+            <a href="index.html#como-funciona" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Como funciona</a>
+        </nav>
+    </header>
+
+    <main class="mx-auto grid w-full max-w-262.5 flex-1 grid-cols-1 items-center gap-8 px-4 py-8 md:grid-cols-2 md:gap-12 md:px-[5%] md:py-12">
+
+        <!-- Painel de boas-vindas -->
+        <section class="text-center md:text-left" aria-labelledby="titulo-boas-vindas">
+            <h1 id="titulo-boas-vindas" class="mb-4 text-[2rem] leading-[1.15] font-bold text-rosa-mais-escuro md:text-[2.6rem]">Sua voz importa.</h1>
+            <p class="mb-6 text-[1.1rem] text-texto-suave">
+                Entre na sua conta para acompanhar o andamento das suas denúncias
+                em um ambiente seguro e acolhedor.
+            </p>
+            <ul class="mx-auto grid max-w-105 gap-3 text-left md:mx-0 md:max-w-none">
+                <li class="relative pl-8.5 before:absolute before:top-0 before:left-0 before:grid before:size-6 before:place-items-center before:rounded-full before:bg-rosa-escuro before:text-[0.8rem] before:font-bold before:text-white before:content-['✓']">Suas informações ficam visíveis apenas para a equipe administradora.</li>
+                <li class="relative pl-8.5 before:absolute before:top-0 before:left-0 before:grid before:size-6 before:place-items-center before:rounded-full before:bg-rosa-escuro before:text-[0.8rem] before:font-bold before:text-white before:content-['✓']">Acompanhe se a sua denúncia já foi atendida.</li>
+                <li class="relative pl-8.5 before:absolute before:top-0 before:left-0 before:grid before:size-6 before:place-items-center before:rounded-full before:bg-rosa-escuro before:text-[0.8rem] before:font-bold before:text-white before:content-['✓']">Acesse conteúdos sobre seus direitos.</li>
+            </ul>
+        </section>
+
+        <!-- Cartão de login -->
+        <section class="rounded-[14px] border-t-6 border-rosa-escuro bg-white px-5 py-7 shadow-cartao sm:px-9 sm:py-10" aria-labelledby="titulo-login">
+            <h2 id="titulo-login" class="text-[1.9rem] font-bold text-rosa-escuro">Entrar</h2>
+            <p class="mb-7 text-texto-suave">Bem-vinda de volta! Preencha seus dados abaixo.</p>
+
+            <!-- Protótipo: o formulário ainda não está ligado a um servidor -->
+            <form class="grid gap-4.5" action="#" method="post">
+
+                <!-- Validação visual feita só com CSS (user-valid / user-invalid):
+                     aparece depois que a usuária interage com o campo -->
+                <div class="grid gap-1.5">
+                    <label for="email" class="text-[0.95rem] font-semibold">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="seuemail@exemplo.com"
+                        autocomplete="email"
+                        required
+                        class="w-full rounded-[10px] border-2 border-borda bg-white px-3.5 py-3 text-texto transition-[border-color,box-shadow] duration-200 ease-[ease] placeholder:text-placeholder hover:border-rosa-claro focus:border-rosa-escuro focus:ring-4 focus:ring-rosa-escuro/15 focus:outline-none user-valid:border-sucesso! user-invalid:border-erro!">
+                </div>
+
+                <div class="grid gap-1.5">
+                    <label for="senha" class="text-[0.95rem] font-semibold">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        minlength="6"
+                        required
+                        class="w-full rounded-[10px] border-2 border-borda bg-white px-3.5 py-3 text-texto transition-[border-color,box-shadow] duration-200 ease-[ease] placeholder:text-placeholder hover:border-rosa-claro focus:border-rosa-escuro focus:ring-4 focus:ring-rosa-escuro/15 focus:outline-none user-valid:border-sucesso! user-invalid:border-erro!">
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between gap-2.5 text-[0.92rem]">
+                    <label class="flex cursor-pointer items-center gap-2">
+                        <input type="checkbox" name="lembrar" class="size-4.5 cursor-pointer accent-rosa-escuro">
+                        <span>Lembrar de mim</span>
+                    </label>
+                    <a href="#" class="font-semibold text-rosa-escuro hover:underline focus-visible:underline">Esqueci minha senha</a>
+                </div>
+
+                <button type="submit" class="mt-1.5 block w-full cursor-pointer rounded-[10px] bg-rosa-escuro px-5 py-3.25 text-center text-[1.05rem] font-bold text-white [transition:background-color_0.2s,color_0.2s,scale_0.1s] hover:bg-rosa-mais-escuro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro active:scale-[0.98]">Entrar</button>
+            </form>
+
+            <p class="mt-5 text-center text-texto-suave">
+                Ainda não tem conta? <a href="#" class="font-semibold text-rosa-escuro hover:underline focus-visible:underline">Cadastre-se</a>
+            </p>
+
+            <div class="my-5.5 flex items-center gap-3 text-[0.9rem] text-texto-suave before:h-px before:flex-1 before:bg-borda after:h-px after:flex-1 after:bg-borda" role="separator"><span>ou</span></div>
+
+            <!-- Caminho para quem não quer se identificar -->
+            <div class="text-center">
+                <p class="mb-2.5 text-texto-suave">Prefere não se identificar?</p>
+                <a href="#" class="block w-full cursor-pointer rounded-[10px] border-2 border-rosa-escuro bg-white px-5 py-3.25 text-center font-bold text-rosa-escuro [transition:background-color_0.2s,color_0.2s,scale_0.1s] hover:bg-rosa-bem-claro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro active:scale-[0.98]">Fazer denúncia anônima</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-rosa-mais-escuro px-[5%] py-5 text-center text-white">
+        <p>
+            Em situação de violência, ligue <strong>180</strong> (Central de Atendimento à Mulher)
+            ou <strong>190</strong> em caso de emergência.
+        </p>
+        <p class="mt-1.5 text-[0.85rem] opacity-85">
+            Voz Delas &middot; Projeto acadêmico alinhado à ODS 5 &mdash; Igualdade de Gênero
+            &middot; <a href="#" class="underline">Privacidade e termos de uso</a>
+        </p>
+    </footer>
+
+</body>
+</html>
