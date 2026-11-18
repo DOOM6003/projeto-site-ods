@@ -11,20 +11,72 @@
 
     <!-- Cabeçalho -->
     <header class="flex flex-wrap items-center justify-center gap-3 bg-white px-4 py-3.5 shadow-topo sm:justify-between sm:px-[5%] sm:py-4">
-        <a href="index.html" class="flex items-center gap-2.5 text-2xl/normal text-rosa-escuro" aria-label="Voz Delas - página inicial">
+        <a href="login.html" class="flex items-center gap-2.5 text-2xl/normal text-rosa-escuro" aria-label="Voz Delas">
             <!-- A imagem tem bastante margem em branco; o zoom (scale-150) recorta essa sobra -->
             <span class="block size-12 overflow-hidden" aria-hidden="true">
                 <img src="./img/logo.png" alt="" class="block size-full scale-150 object-cover">
             </span>
             <span>Voz <strong>Delas</strong></span>
         </a>
+        <!-- No login, o menu não troca de página: cada botão abre um menu flutuante
+             (atributo popover do HTML) com um resumo do assunto. Sem JavaScript. -->
         <nav class="flex flex-wrap justify-center gap-3.5 text-[0.9rem] sm:justify-start sm:gap-5 sm:text-base" aria-label="Navegação principal">
-            <a href="index.html" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Início</a>
-            <a href="index.html#direitos" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Seus direitos</a>
-            <a href="index.html#ajuda" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Onde buscar ajuda</a>
-            <a href="index.html#como-funciona" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Como funciona</a>
+            <button type="button" popovertarget="resumo-inicio" class="cursor-pointer border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Início</button>
+            <button type="button" popovertarget="resumo-direitos" class="cursor-pointer border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Seus direitos</button>
+            <button type="button" popovertarget="resumo-ajuda" class="cursor-pointer border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Onde buscar ajuda</button>
+            <button type="button" popovertarget="resumo-como-funciona" class="cursor-pointer border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Como funciona</button>
         </nav>
     </header>
+
+    <!-- Menus flutuantes com o resumo de cada assunto.
+         popover: abre pelo botão do menu e fecha ao clicar fora, com Esc ou no "×".
+         inset-auto + top/right: tira o popover do centro e prende logo abaixo do cabeçalho. -->
+    <div id="resumo-inicio" popover class="inset-auto top-32 right-4 left-4 m-0 w-auto rounded-[14px] border-0 border-t-6 border-rosa-escuro bg-white p-6 text-texto shadow-cartao sm:top-24 sm:right-[5%] sm:left-auto sm:w-96">
+        <div class="mb-3 flex items-start justify-between gap-4">
+            <h2 class="text-[1.3rem] font-bold text-rosa-escuro">Início</h2>
+            <button type="button" popovertarget="resumo-inicio" popovertargetaction="hide" class="-mt-1 cursor-pointer text-2xl leading-none text-texto-suave hover:text-rosa-escuro" aria-label="Fechar">&times;</button>
+        </div>
+        <p class="mb-3 text-texto-suave">O Voz Delas é um espaço para mulheres registrarem, de forma <strong class="text-texto">anônima</strong>, situações de preconceito, discriminação ou assédio, principalmente no trabalho.</p>
+        <p class="text-texto-suave">Entre na sua conta ou faça uma denúncia anônima para acessar a página inicial. Projeto alinhado à ODS 5 &mdash; Igualdade de Gênero.</p>
+    </div>
+
+    <div id="resumo-direitos" popover class="inset-auto top-32 right-4 left-4 m-0 w-auto rounded-[14px] border-0 border-t-6 border-rosa-escuro bg-white p-6 text-texto shadow-cartao sm:top-24 sm:right-[5%] sm:left-auto sm:w-96">
+        <div class="mb-3 flex items-start justify-between gap-4">
+            <h2 class="text-[1.3rem] font-bold text-rosa-escuro">Seus direitos</h2>
+            <button type="button" popovertarget="resumo-direitos" popovertargetaction="hide" class="-mt-1 cursor-pointer text-2xl leading-none text-texto-suave hover:text-rosa-escuro" aria-label="Fechar">&times;</button>
+        </div>
+        <ul class="grid gap-2 text-[0.95rem] text-texto-suave">
+            <li><strong class="text-texto">Salário igual</strong> para a mesma função (Lei 14.611/2023).</li>
+            <li><strong class="text-texto">Sem discriminação</strong> na contratação, como exigir teste de gravidez (Lei 9.029/1995).</li>
+            <li><strong class="text-texto">Assédio sexual é crime</strong> (art. 216-A do Código Penal).</li>
+            <li><strong class="text-texto">Empresas devem prevenir</strong> o assédio e ter canais de denúncia (Lei 14.457/2022).</li>
+        </ul>
+    </div>
+
+    <div id="resumo-ajuda" popover class="inset-auto top-32 right-4 left-4 m-0 w-auto rounded-[14px] border-0 border-t-6 border-rosa-escuro bg-white p-6 text-texto shadow-cartao sm:top-24 sm:right-[5%] sm:left-auto sm:w-96">
+        <div class="mb-3 flex items-start justify-between gap-4">
+            <h2 class="text-[1.3rem] font-bold text-rosa-escuro">Onde buscar ajuda</h2>
+            <button type="button" popovertarget="resumo-ajuda" popovertargetaction="hide" class="-mt-1 cursor-pointer text-2xl leading-none text-texto-suave hover:text-rosa-escuro" aria-label="Fechar">&times;</button>
+        </div>
+        <ul class="grid gap-2 text-[0.95rem] text-texto-suave">
+            <li><strong class="text-rosa-escuro">180</strong> &mdash; Central de Atendimento à Mulher, gratuita e sigilosa, 24 horas.</li>
+            <li><strong class="text-rosa-escuro">190</strong> &mdash; Polícia Militar, em emergências.</li>
+            <li><strong class="text-rosa-escuro">MPT</strong> &mdash; Ministério Público do Trabalho, para casos no trabalho.</li>
+            <li><strong class="text-rosa-escuro">DEAM</strong> &mdash; Delegacia da Mulher, para registrar ocorrências.</li>
+        </ul>
+    </div>
+
+    <div id="resumo-como-funciona" popover class="inset-auto top-32 right-4 left-4 m-0 w-auto rounded-[14px] border-0 border-t-6 border-rosa-escuro bg-white p-6 text-texto shadow-cartao sm:top-24 sm:right-[5%] sm:left-auto sm:w-96">
+        <div class="mb-3 flex items-start justify-between gap-4">
+            <h2 class="text-[1.3rem] font-bold text-rosa-escuro">Como funciona</h2>
+            <button type="button" popovertarget="resumo-como-funciona" popovertargetaction="hide" class="-mt-1 cursor-pointer text-2xl leading-none text-texto-suave hover:text-rosa-escuro" aria-label="Fechar">&times;</button>
+        </div>
+        <ol class="grid gap-2 text-[0.95rem] text-texto-suave">
+            <li><strong class="text-texto">1. Registre:</strong> descreva a situação no formulário, sem se identificar.</li>
+            <li><strong class="text-texto">2. Análise:</strong> só a equipe administradora vê a denúncia.</li>
+            <li><strong class="text-texto">3. Acompanhe:</strong> consulte se a denúncia já foi atendida.</li>
+        </ol>
+    </div>
 
     <main class="mx-auto grid w-full max-w-262.5 flex-1 grid-cols-1 items-center gap-8 px-4 py-8 md:grid-cols-2 md:gap-12 md:px-[5%] md:py-12">
 
