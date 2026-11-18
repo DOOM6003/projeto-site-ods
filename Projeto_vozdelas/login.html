@@ -47,21 +47,19 @@
             <h2 id="titulo-login" class="text-[1.9rem] font-bold text-rosa-escuro">Entrar</h2>
             <p class="mb-7 text-texto-suave">Bem-vinda de volta! Preencha seus dados abaixo.</p>
 
-            <!-- Protótipo: o formulário ainda não está ligado a um servidor -->
-            <form class="grid gap-4.5" action="#" method="post">
+            <!-- Protótipo: qualquer login entra, sem verificação (novalidate).
+                 Os campos não têm "name" de propósito: assim o e-mail e a senha
+                 não são enviados nem aparecem no endereço da página seguinte. -->
+            <form class="grid gap-4.5" action="index.html" method="get" novalidate>
 
-                <!-- Validação visual feita só com CSS (user-valid / user-invalid):
-                     aparece depois que a usuária interage com o campo -->
                 <div class="grid gap-1.5">
                     <label for="email" class="text-[0.95rem] font-semibold">E-mail</label>
                     <input
                         type="email"
                         id="email"
-                        name="email"
                         placeholder="seuemail@exemplo.com"
                         autocomplete="email"
-                        required
-                        class="w-full rounded-[10px] border-2 border-borda bg-white px-3.5 py-3 text-texto transition-[border-color,box-shadow] duration-200 ease-[ease] placeholder:text-placeholder hover:border-rosa-claro focus:border-rosa-escuro focus:ring-4 focus:ring-rosa-escuro/15 focus:outline-none user-valid:border-sucesso! user-invalid:border-erro!">
+                        class="w-full rounded-[10px] border-2 border-borda bg-white px-3.5 py-3 text-texto transition-[border-color,box-shadow] duration-200 ease-[ease] placeholder:text-placeholder hover:border-rosa-claro focus:border-rosa-escuro focus:ring-4 focus:ring-rosa-escuro/15 focus:outline-none">
                 </div>
 
                 <div class="grid gap-1.5">
@@ -69,17 +67,14 @@
                     <input
                         type="password"
                         id="senha"
-                        name="senha"
                         placeholder="Digite sua senha"
                         autocomplete="current-password"
-                        minlength="6"
-                        required
-                        class="w-full rounded-[10px] border-2 border-borda bg-white px-3.5 py-3 text-texto transition-[border-color,box-shadow] duration-200 ease-[ease] placeholder:text-placeholder hover:border-rosa-claro focus:border-rosa-escuro focus:ring-4 focus:ring-rosa-escuro/15 focus:outline-none user-valid:border-sucesso! user-invalid:border-erro!">
+                        class="w-full rounded-[10px] border-2 border-borda bg-white px-3.5 py-3 text-texto transition-[border-color,box-shadow] duration-200 ease-[ease] placeholder:text-placeholder hover:border-rosa-claro focus:border-rosa-escuro focus:ring-4 focus:ring-rosa-escuro/15 focus:outline-none">
                 </div>
 
                 <div class="flex flex-wrap items-center justify-between gap-2.5 text-[0.92rem]">
                     <label class="flex cursor-pointer items-center gap-2">
-                        <input type="checkbox" name="lembrar" class="size-4.5 cursor-pointer accent-rosa-escuro">
+                        <input type="checkbox" class="size-4.5 cursor-pointer accent-rosa-escuro">
                         <span>Lembrar de mim</span>
                     </label>
                     <a href="#" class="font-semibold text-rosa-escuro hover:underline focus-visible:underline">Esqueci minha senha</a>
@@ -89,7 +84,7 @@
             </form>
 
             <p class="mt-5 text-center text-texto-suave">
-                Ainda não tem conta? <a href="#" class="font-semibold text-rosa-escuro hover:underline focus-visible:underline">Cadastre-se</a>
+                Ainda não tem conta? <a href="index.html" class="font-semibold text-rosa-escuro hover:underline focus-visible:underline">Cadastre-se</a>
             </p>
 
             <div class="my-5.5 flex items-center gap-3 text-[0.9rem] text-texto-suave before:h-px before:flex-1 before:bg-borda after:h-px after:flex-1 after:bg-borda" role="separator"><span>ou</span></div>
@@ -97,7 +92,7 @@
             <!-- Caminho para quem não quer se identificar -->
             <div class="text-center">
                 <p class="mb-2.5 text-texto-suave">Prefere não se identificar?</p>
-                <a href="#" class="block w-full cursor-pointer rounded-[10px] border-2 border-rosa-escuro bg-white px-5 py-3.25 text-center font-bold text-rosa-escuro [transition:background-color_0.2s,color_0.2s,scale_0.1s] hover:bg-rosa-bem-claro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro active:scale-[0.98]">Fazer denúncia anônima</a>
+                <a href="index.html" class="block w-full cursor-pointer rounded-[10px] border-2 border-rosa-escuro bg-white px-5 py-3.25 text-center font-bold text-rosa-escuro [transition:background-color_0.2s,color_0.2s,scale_0.1s] hover:bg-rosa-bem-claro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro active:scale-[0.98]">Fazer denúncia anônima</a>
             </div>
         </section>
 
@@ -114,5 +109,19 @@
         </p>
     </footer>
 
+    <!-- Protótipo sem verificação: ao entrar (botão Entrar, Cadastre-se, denúncia anônima
+         ou qualquer link para o index), marca que a pessoa passou pelo login. -->
+    <script>
+        function marcarEntrada() {
+            try { sessionStorage.setItem('vozdelas-entrou', 'sim'); } catch (e) {}
+        }
+        // Ao abrir o login (inclusive pelo botão "Sair"), começa sem entrada marcada
+        try { sessionStorage.removeItem('vozdelas-entrou'); } catch (e) {}
+
+        document.querySelector('form').addEventListener('submit', marcarEntrada);
+        document.querySelectorAll('a[href^="index.html"]').forEach(function (link) {
+            link.addEventListener('click', marcarEntrada);
+        });
+    </script>
 </body>
 </html>

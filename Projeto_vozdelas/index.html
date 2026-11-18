@@ -6,6 +6,13 @@
     <meta name="description" content="Voz Delas: faça denúncias anônimas de discriminação de gênero, conheça seus direitos e encontre canais oficiais de ajuda.">
     <title>Voz Delas | Sua voz importa</title>
     <link rel="stylesheet" href="./css/output.css">
+    <!-- O login é a primeira tela: quem abrir esta página sem ter passado
+         pelo login.html é mandado de volta para ele (vale até fechar a aba). -->
+    <script>
+        try {
+            if (sessionStorage.getItem('vozdelas-entrou') !== 'sim') location.replace('login.html');
+        } catch (e) { /* sem acesso ao armazenamento: deixa a página abrir */ }
+    </script>
 </head>
 <body class="flex min-h-screen flex-col font-sans leading-normal text-texto fundo-rosa">
 
@@ -26,41 +33,82 @@
             <a href="#ajuda" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Onde buscar ajuda</a>
             <a href="#como-funciona" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Como funciona</a>
         </nav>
-
-        <!-- Botões de conta (rascunho: "Entrar" e "Cadastro") -->
-        <div class="flex gap-2">
-            <a href="login.html" class="rounded-[10px] border-2 border-rosa-escuro px-4 py-1.5 text-[0.95rem] font-bold text-rosa-escuro transition-colors duration-200 hover:bg-rosa-bem-claro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro">Entrar</a>
-            <a href="#" class="rounded-[10px] border-2 border-rosa-escuro bg-rosa-escuro px-4 py-1.5 text-[0.95rem] font-bold text-white transition-colors duration-200 hover:border-rosa-mais-escuro hover:bg-rosa-mais-escuro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro">Cadastre-se</a>
-        </div>
+http://127.0.0.1:5500/Projeto_vozdelas/login.html
+        <!-- Quem chega aqui já passou pelo login, então o botão é de sair -->
+        <a href="login.html" class="rounded-[10px] border-2 border-rosa-escuro px-4 py-1.5 text-[0.95rem] font-bold text-rosa-escuro transition-colors duration-200 hover:bg-rosa-bem-claro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro">Sair</a>
     </header>
+
+    <!-- Botão fixo no meio da tela, na borda esquerda: leva para a página de denúncia.
+         fixed + top-1/2 + -translate-y-1/2 = centralizado na altura e sempre visível ao rolar.
+         [writing-mode:vertical-rl] + rotate-180 = texto em pé, lido de baixo para cima. -->
+    <a href="denuncia.html" class="fixed top-1/2 left-0 z-20 flex -translate-y-1/2 items-center gap-2 rounded-r-[14px] bg-rosa-escuro px-3 py-5 font-bold text-white shadow-cartao transition-[background-color,padding] duration-200 hover:bg-rosa-mais-escuro hover:pl-4 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro sm:px-3.5 sm:py-6 sm:text-[1.05rem]">
+        <span class="rotate-180 [writing-mode:vertical-rl]">Fazer denúncia</span>
+    </a>
 
     <main class="flex-1">
 
-        <!-- Destaque principal: chamada + botões de denúncia + imagem de incentivo -->
-        <section class="mx-auto grid w-full max-w-262.5 grid-cols-1 items-center gap-10 px-4 py-10 md:grid-cols-2 md:gap-12 md:px-[5%] md:py-16" aria-labelledby="titulo-destaque">
-            <div class="text-center md:text-left">
-                <p class="mb-3 inline-block rounded-full bg-white px-3.5 py-1 text-[0.85rem] font-semibold text-rosa-escuro shadow-topo">ODS 5 &middot; Igualdade de Gênero</p>
-                <h1 id="titulo-destaque" class="mb-4 text-[2.2rem] leading-[1.15] font-bold text-rosa-mais-escuro md:text-[3rem]">Sua voz importa.<br>Ninguém precisa saber quem você é.</h1>
-                <p class="mb-8 text-[1.1rem] text-texto-suave">
-                    Sofreu preconceito, discriminação ou assédio no trabalho ou em qualquer outro lugar?
-                    Registre o que aconteceu de forma <strong class="text-texto">anônima</strong> e acompanhe
-                    se a sua denúncia já foi atendida.
+        <!-- Topo: menu lateral esquerdo (com o botão de denúncia) + mensagens de incentivo -->
+        <div class="mx-auto grid w-full max-w-262.5 grid-cols-1 items-start gap-6 px-4 py-8 md:grid-cols-[260px_1fr] md:gap-10 md:px-[5%] md:py-12">
+
+            <!-- Menu lateral esquerdo: o botão de denúncia fica em destaque no topo -->
+            <aside class="rounded-[14px] bg-white p-5 shadow-cartao" aria-label="Menu lateral">
+                <a href="denuncia.html" class="mb-5 flex items-center justify-center gap-2 rounded-[10px] bg-rosa-escuro px-5 py-4 text-center text-[1.1rem] font-bold text-white shadow-cartao [transition:background-color_0.2s,scale_0.1s] hover:bg-rosa-mais-escuro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro active:scale-[0.98]">
+                    <span class="text-2xl leading-none" aria-hidden="true">+</span> Fazer denúncia
+                </a>
+
+                <nav aria-label="Atalhos">
+                    <ul class="grid gap-1">
+                        <li><a href="#" class="block rounded-[10px] px-4 py-2.5 font-medium text-texto-suave transition-colors duration-200 hover:bg-rosa-bem-claro hover:text-rosa-escuro focus-visible:bg-rosa-bem-claro focus-visible:text-rosa-escuro">Consultar denúncia</a></li>
+                        <li><a href="#como-funciona" class="block rounded-[10px] px-4 py-2.5 font-medium text-texto-suave transition-colors duration-200 hover:bg-rosa-bem-claro hover:text-rosa-escuro focus-visible:bg-rosa-bem-claro focus-visible:text-rosa-escuro">Como funciona</a></li>
+                        <li><a href="#direitos" class="block rounded-[10px] px-4 py-2.5 font-medium text-texto-suave transition-colors duration-200 hover:bg-rosa-bem-claro hover:text-rosa-escuro focus-visible:bg-rosa-bem-claro focus-visible:text-rosa-escuro">Seus direitos</a></li>
+                        <li><a href="#ajuda" class="block rounded-[10px] px-4 py-2.5 font-medium text-texto-suave transition-colors duration-200 hover:bg-rosa-bem-claro hover:text-rosa-escuro focus-visible:bg-rosa-bem-claro focus-visible:text-rosa-escuro">Onde buscar ajuda</a></li>
+                    </ul>
+                </nav>
+
+                <p class="mt-5 rounded-[10px] bg-rosa-bem-claro px-4 py-3 text-[0.88rem]">
+                    Em risco imediato? Ligue <strong class="text-rosa-escuro">190</strong>.<br>
+                    Orientação: <strong class="text-rosa-escuro">180</strong>.
                 </p>
+            </aside>
 
-                <div class="mx-auto grid max-w-105 gap-3 sm:grid-cols-2 md:mx-0">
-                    <a href="#" class="block rounded-[10px] bg-rosa-escuro px-5 py-3.25 text-center text-[1.05rem] font-bold text-white shadow-cartao [transition:background-color_0.2s,scale_0.1s] hover:bg-rosa-mais-escuro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro active:scale-[0.98]">Fazer denúncia</a>
-                    <a href="#" class="block rounded-[10px] border-2 border-rosa-escuro bg-white px-5 py-3 text-center text-[1.05rem] font-bold text-rosa-escuro [transition:background-color_0.2s,scale_0.1s] hover:bg-rosa-bem-claro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro active:scale-[0.98]">Consultar denúncia</a>
+            <section aria-labelledby="titulo-destaque">
+                <p class="mb-3 inline-block rounded-full bg-white px-3.5 py-1 text-[0.85rem] font-semibold text-rosa-escuro shadow-topo">ODS 5 &middot; Igualdade de Gênero</p>
+                <h1 id="titulo-destaque" class="mb-2 text-[2rem] leading-[1.15] font-bold text-rosa-mais-escuro md:text-[2.4rem]">Olá! Que bom ter você aqui.</h1>
+                <p class="mb-8 text-[1.05rem] text-texto-suave">Este é um espaço seguro. Quando estiver pronta, use o botão <strong class="text-rosa-escuro">Fazer denúncia</strong> no menu ao lado. Ninguém precisa saber quem você é.</p>
+
+                <!-- Mensagens de incentivo: as 4 ficam empilhadas na mesma célula do grid
+                     (col-start-1 row-start-1) e a animação animate-incentivo mostra uma de cada vez.
+                     Para quem prefere menos movimento (motion-reduce), fica só a primeira, parada. -->
+                <div class="overflow-hidden rounded-[14px] border-t-6 border-rosa-escuro bg-white shadow-cartao" role="region" aria-label="Mensagens de incentivo">
+                    <div class="grid px-6 py-10 text-center sm:px-12 sm:py-14">
+                        <blockquote class="col-start-1 row-start-1 animate-incentivo motion-reduce:animate-none">
+                            <p class="mb-3 text-[1.6rem] leading-snug font-bold text-rosa-escuro sm:text-[2rem]">“Sua voz importa.”</p>
+                            <p class="text-texto-suave">Contar o que aconteceu é um passo de coragem, e você não precisa dar esse passo sozinha.</p>
+                        </blockquote>
+                        <blockquote class="col-start-1 row-start-1 animate-incentivo [animation-delay:5s] motion-reduce:hidden">
+                            <p class="mb-3 text-[1.6rem] leading-snug font-bold text-rosa-escuro sm:text-[2rem]">“A culpa nunca é sua.”</p>
+                            <p class="text-texto-suave">Discriminação e assédio são responsabilidade de quem os pratica, não de quem os sofre.</p>
+                        </blockquote>
+                        <blockquote class="col-start-1 row-start-1 animate-incentivo [animation-delay:10s] motion-reduce:hidden">
+                            <p class="mb-3 text-[1.6rem] leading-snug font-bold text-rosa-escuro sm:text-[2rem]">“Você tem direitos.”</p>
+                            <p class="text-texto-suave">Salário igual, respeito e um ambiente sem assédio são garantidos por lei.</p>
+                        </blockquote>
+                        <blockquote class="col-start-1 row-start-1 animate-incentivo [animation-delay:15s] motion-reduce:hidden">
+                            <p class="mb-3 text-[1.6rem] leading-snug font-bold text-rosa-escuro sm:text-[2rem]">“Cada relato faz diferença.”</p>
+                            <p class="text-texto-suave">Denunciar dá visibilidade à desigualdade e ajuda a proteger outras mulheres.</p>
+                        </blockquote>
+                    </div>
+
+                    <!-- Bolinhas que acompanham a mensagem da vez -->
+                    <div class="flex justify-center gap-2 pb-6 motion-reduce:hidden" aria-hidden="true">
+                        <span class="relative size-2.5 rounded-full bg-rosa-claro"><span class="absolute inset-0 rounded-full bg-rosa-escuro animate-incentivo"></span></span>
+                        <span class="relative size-2.5 rounded-full bg-rosa-claro"><span class="absolute inset-0 rounded-full bg-rosa-escuro animate-incentivo [animation-delay:5s]"></span></span>
+                        <span class="relative size-2.5 rounded-full bg-rosa-claro"><span class="absolute inset-0 rounded-full bg-rosa-escuro animate-incentivo [animation-delay:10s]"></span></span>
+                        <span class="relative size-2.5 rounded-full bg-rosa-claro"><span class="absolute inset-0 rounded-full bg-rosa-escuro animate-incentivo [animation-delay:15s]"></span></span>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Imagem de incentivo -->
-            <figure class="mx-auto w-full max-w-105 overflow-hidden rounded-[14px] border-t-6 border-rosa-escuro bg-white shadow-cartao">
-                <img src="./img/logomarca-oficial.png" alt="Logomarca do Voz Delas: silhueta de uma mulher dentro de um balão de fala" class="block aspect-square w-full object-cover">
-                <figcaption class="border-t border-borda px-6 py-4 text-center text-texto-suave">
-                    Um espaço seguro e acolhedor para <strong class="text-rosa-escuro">ser ouvida</strong>.
-                </figcaption>
-            </figure>
-        </section>
+            </section>
+        </div>
 
         <!-- Como funciona -->
         <section id="como-funciona" class="scroll-mt-28 bg-white py-14" aria-labelledby="titulo-como-funciona">
@@ -151,7 +199,7 @@
             <div class="mx-auto max-w-3xl rounded-[14px] bg-rosa-escuro px-6 py-10 text-center text-white shadow-cartao sm:px-12">
                 <h2 id="titulo-chamada" class="mb-3 text-[1.7rem] leading-tight font-bold">Você não está sozinha.</h2>
                 <p class="mb-6 opacity-90">Cada relato ajuda a dar visibilidade à desigualdade e a construir ambientes mais justos.</p>
-                <a href="#" class="inline-block rounded-[10px] bg-white px-7 py-3.25 font-bold text-rosa-escuro [transition:background-color_0.2s,scale_0.1s] hover:bg-rosa-bem-claro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro active:scale-[0.98]">Fazer denúncia anônima</a>
+                <a href="denuncia.html" class="inline-block rounded-[10px] bg-white px-7 py-3.25 font-bold text-rosa-escuro [transition:background-color_0.2s,scale_0.1s] hover:bg-rosa-bem-claro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro active:scale-[0.98]">Fazer denúncia anônima</a>
             </div>
         </section>
 

@@ -33,6 +33,19 @@
        md = acima de 820px (layout em duas colunas) */
     --breakpoint-sm: 30.0625rem; /* 481px */
     --breakpoint-md: 51.3125rem; /* 821px */
+
+    /* Mensagens de incentivo que vão passando (classe animate-incentivo).
+       São 4 mensagens em 20s: cada uma aparece por ~5s.
+       O atraso de cada uma é dado no HTML com [animation-delay:5s], 10s, 15s. */
+    --animate-incentivo: incentivo 20s ease-in-out infinite both;
+
+    @keyframes incentivo {
+        0% { opacity: 0; }
+        4% { opacity: 1; }
+        22% { opacity: 1; }
+        26% { opacity: 0; }
+        100% { opacity: 0; }
+    }
 }
 
 /* Fundo rosa com dois brilhos em degradê (usado no <body>) */

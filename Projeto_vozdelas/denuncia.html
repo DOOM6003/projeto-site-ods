@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registre de forma anônima uma situação de discriminação de gênero no Voz Delas.">
+    <title>Fazer denúncia | Voz Delas</title>
+    <link rel="stylesheet" href="./css/output.css">
+    <!-- O login é a primeira tela: quem abrir esta página sem ter passado
+         pelo login.html é mandado de volta para ele (vale até fechar a aba). -->
+    <script>
+        try {
+            if (sessionStorage.getItem('vozdelas-entrou') !== 'sim') location.replace('login.html');
+        } catch (e) { /* sem acesso ao armazenamento: deixa a página abrir */ }
+    </script>
+</head>
+<body class="flex min-h-screen flex-col font-sans leading-normal text-texto fundo-rosa">
+
+    <!-- Cabeçalho -->
+    <header class="flex flex-wrap items-center justify-center gap-3 bg-white px-4 py-3.5 shadow-topo sm:justify-between sm:px-[5%] sm:py-4">
+        <a href="index.html" class="flex items-center gap-2.5 text-2xl/normal text-rosa-escuro" aria-label="Voz Delas - página inicial">
+            <!-- A imagem tem bastante margem em branco; o zoom (scale-150) recorta essa sobra -->
+            <span class="block size-12 overflow-hidden" aria-hidden="true">
+                <img src="./img/logo.png" alt="" class="block size-full scale-150 object-cover">
+            </span>
+            <span>Voz <strong>Delas</strong></span>
+        </a>
+        <nav class="flex flex-wrap justify-center gap-3.5 text-[0.9rem] sm:justify-start sm:gap-5 sm:text-base" aria-label="Navegação principal">
+            <a href="index.html" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Início</a>
+            <a href="index.html#direitos" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Seus direitos</a>
+            <a href="index.html#ajuda" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Onde buscar ajuda</a>
+            <a href="index.html#como-funciona" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Como funciona</a>
+        </nav>
+    </header>
+
+    <main class="mx-auto grid w-full max-w-262.5 flex-1 grid-cols-1 items-start gap-8 px-4 py-8 md:grid-cols-[2fr_3fr] md:gap-12 md:px-[5%] md:py-12">
+
+        <!-- Orientações (rascunho: "orientações" ao lado da denúncia) -->
+        <aside aria-labelledby="titulo-orientacoes">
+            <h1 class="mb-3 text-[2rem] leading-[1.15] font-bold text-rosa-mais-escuro md:text-[2.4rem]">Fazer denúncia</h1>
+            <p class="mb-6 text-[1.05rem] text-texto-suave">Conte o que aconteceu. Sua identidade não é pedida e o relato fica visível apenas para a equipe administradora.</p>
+
+            <div class="rounded-[14px] bg-white p-6 shadow-cartao">
+                <h2 id="titulo-orientacoes" class="mb-4 text-[1.2rem] font-bold text-rosa-escuro">Orientações</h2>
+                <ul class="grid gap-3">
+                    <li class="relative pl-8.5 before:absolute before:top-0 before:left-0 before:grid before:size-6 before:place-items-center before:rounded-full before:bg-rosa-escuro before:text-[0.8rem] before:font-bold before:text-white before:content-['1']">Descreva o que aconteceu com o máximo de detalhes que lembrar.</li>
+                    <li class="relative pl-8.5 before:absolute before:top-0 before:left-0 before:grid before:size-6 before:place-items-center before:rounded-full before:bg-rosa-escuro before:text-[0.8rem] before:font-bold before:text-white before:content-['2']">Informe onde e quando foi, se souber.</li>
+                    <li class="relative pl-8.5 before:absolute before:top-0 before:left-0 before:grid before:size-6 before:place-items-center before:rounded-full before:bg-rosa-escuro before:text-[0.8rem] before:font-bold before:text-white before:content-['3']">Não escreva seu nome, CPF ou telefone no texto se quiser continuar anônima.</li>
+                </ul>
+                <p class="mt-5 rounded-[10px] bg-rosa-bem-claro px-4 py-3 text-[0.92rem]">
+                    Em risco imediato? Ligue <strong class="text-rosa-escuro">190</strong>. Para orientação, ligue <strong class="text-rosa-escuro">180</strong>.
+                </p>
+            </div>
+        </aside>
+
+        <!-- Cartão da denúncia -->
+        <section class="rounded-[14px] border-t-6 border-rosa-escuro bg-white px-5 py-7 shadow-cartao sm:px-9 sm:py-10" aria-label="Formulário de denúncia">
+
+            <!-- Confirmação: aparece só depois do envio (quando o endereço termina em #enviada),
+                 usando a variante target: do Tailwind, sem JavaScript -->
+            <div id="enviada" class="peer hidden text-center target:block">
+                <span class="mx-auto mb-4 grid size-14 place-items-center rounded-full bg-rosa-escuro text-2xl font-bold text-white" aria-hidden="true">✓</span>
+                <h2 class="mb-2 text-[1.6rem] font-bold text-rosa-escuro">Denúncia enviada</h2>
+                <p class="mb-6 text-texto-suave">Obrigada por confiar no Voz Delas. Seu relato foi registrado de forma anônima.</p>
+                <div class="grid gap-3 sm:grid-cols-2">
+                    <a href="denuncia.html" class="block rounded-[10px] border-2 border-rosa-escuro bg-white px-5 py-3 text-center font-bold text-rosa-escuro transition-colors duration-200 hover:bg-rosa-bem-claro">Nova denúncia</a>
+                    <a href="index.html" class="block rounded-[10px] bg-rosa-escuro px-5 py-3.25 text-center font-bold text-white transition-colors duration-200 hover:bg-rosa-mais-escuro">Voltar ao início</a>
+                </div>
+            </div>
+
+            <!-- Protótipo: envia sem verificação e sem guardar nada (campos sem "name") -->
+            <form class="grid gap-4.5 peer-target:hidden" action="#enviada" method="get" novalidate>
+                <h2 class="text-[1.9rem] font-bold text-rosa-escuro">Denúncia</h2>
+
+                <div class="grid gap-1.5">
+                    <label for="tipo" class="text-[0.95rem] font-semibold">Tipo de situação</label>
+                    <select id="tipo" class="w-full cursor-pointer rounded-[10px] border-2 border-borda bg-white px-3.5 py-3 text-texto transition-[border-color,box-shadow] duration-200 ease-[ease] hover:border-rosa-claro focus:border-rosa-escuro focus:ring-4 focus:ring-rosa-escuro/15 focus:outline-none">
+                        <option>Discriminação</option>
+                        <option>Assédio moral</option>
+                        <option>Assédio sexual</option>
+                        <option>Diferença salarial</option>
+                        <option>Outra</option>
+                    </select>
+                </div>
+
+                <div class="grid gap-4.5 sm:grid-cols-2">
+                    <div class="grid gap-1.5">
+                        <label for="local" class="text-[0.95rem] font-semibold">Onde aconteceu</label>
+                        <select id="local" class="w-full cursor-pointer rounded-[10px] border-2 border-borda bg-white px-3.5 py-3 text-texto transition-[border-color,box-shadow] duration-200 ease-[ease] hover:border-rosa-claro focus:border-rosa-escuro focus:ring-4 focus:ring-rosa-escuro/15 focus:outline-none">
+                            <option>Trabalho</option>
+                            <option>Instituição de ensino</option>
+                            <option>Espaço público</option>
+                            <option>Internet</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                    <div class="grid gap-1.5">
+                        <label for="data" class="text-[0.95rem] font-semibold">Quando <span class="font-normal text-texto-suave">(opcional)</span></label>
+                        <input type="date" id="data" class="w-full rounded-[10px] border-2 border-borda bg-white px-3.5 py-2.75 text-texto transition-[border-color,box-shadow] duration-200 ease-[ease] hover:border-rosa-claro focus:border-rosa-escuro focus:ring-4 focus:ring-rosa-escuro/15 focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid gap-1.5">
+                    <label for="relato" class="text-[0.95rem] font-semibold">O que aconteceu?</label>
+                    <textarea id="relato" rows="7" placeholder="Escreva aqui o seu relato..." class="w-full resize-y rounded-[10px] border-2 border-borda bg-white px-3.5 py-3 text-texto transition-[border-color,box-shadow] duration-200 ease-[ease] placeholder:text-placeholder hover:border-rosa-claro focus:border-rosa-escuro focus:ring-4 focus:ring-rosa-escuro/15 focus:outline-none"></textarea>
+                </div>
+
+                <button type="submit" class="mt-1.5 block w-full cursor-pointer rounded-[10px] bg-rosa-escuro px-5 py-3.25 text-center text-[1.05rem] font-bold text-white [transition:background-color_0.2s,color_0.2s,scale_0.1s] hover:bg-rosa-mais-escuro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro active:scale-[0.98]">Enviar denúncia anônima</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="bg-rosa-mais-escuro px-[5%] py-5 text-center text-white">
+        <p>
+            Em situação de violência, ligue <strong>180</strong> (Central de Atendimento à Mulher)
+            ou <strong>190</strong> em caso de emergência.
+        </p>
+        <p class="mt-1.5 text-[0.85rem] opacity-85">
+            Voz Delas &middot; Projeto acadêmico alinhado à ODS 5 &mdash; Igualdade de Gênero
+            &middot; <a href="#" class="underline">Privacidade e termos de uso</a>
+        </p>
+    </footer>
+
+</body>
+</html>
