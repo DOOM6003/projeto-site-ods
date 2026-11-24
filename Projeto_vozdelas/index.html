@@ -33,7 +33,6 @@
             <a href="#ajuda" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Onde buscar ajuda</a>
             <a href="#como-funciona" class="border-b-2 border-transparent pb-0.5 font-medium text-texto-suave transition-colors duration-200 ease-[ease] hover:border-rosa-escuro hover:text-rosa-escuro focus-visible:border-rosa-escuro focus-visible:text-rosa-escuro">Como funciona</a>
         </nav>
-http://127.0.0.1:5500/Projeto_vozdelas/login.html
         <!-- Quem chega aqui já passou pelo login, então o botão é de sair -->
         <a href="login.html" class="rounded-[10px] border-2 border-rosa-escuro px-4 py-1.5 text-[0.95rem] font-bold text-rosa-escuro transition-colors duration-200 hover:bg-rosa-bem-claro focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-rosa-claro">Sair</a>
     </header>
@@ -120,19 +119,86 @@ http://127.0.0.1:5500/Projeto_vozdelas/login.html
                     <li class="rounded-[14px] border-2 border-borda bg-rosa-bem-claro/50 p-6">
                         <span class="mb-4 grid size-11 place-items-center rounded-full bg-rosa-escuro text-lg font-bold text-white" aria-hidden="true">1</span>
                         <h3 class="mb-2 text-[1.2rem] font-bold text-rosa-mais-escuro">Registre</h3>
-                        <p class="text-texto-suave">Descreva a situação no formulário. Você não precisa se identificar.</p>
+                        <p class="text-texto-suave">Clique em <strong class="text-rosa-escuro">Fazer denúncia</strong> e descreva a situação no formulário. Você não precisa se identificar.</p>
+                        <ul class="mt-3 grid list-disc gap-1.5 pl-5 text-[0.93rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Escolha o tipo: discriminação, assédio moral, assédio sexual, diferença salarial ou outra.</li>
+                            <li>Diga onde aconteceu: trabalho, instituição de ensino, espaço público ou internet.</li>
+                            <li>A data é opcional. Fatos antigos também podem ser relatados.</li>
+                        </ul>
                     </li>
                     <li class="rounded-[14px] border-2 border-borda bg-rosa-bem-claro/50 p-6">
                         <span class="mb-4 grid size-11 place-items-center rounded-full bg-rosa-escuro text-lg font-bold text-white" aria-hidden="true">2</span>
                         <h3 class="mb-2 text-[1.2rem] font-bold text-rosa-mais-escuro">Análise</h3>
                         <p class="text-texto-suave">Somente a equipe administradora tem acesso às informações da denúncia.</p>
+                        <ul class="mt-3 grid list-disc gap-1.5 pl-5 text-[0.93rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Cada relato é lido com sigilo e sem julgamentos.</li>
+                            <li>Juntos, os relatos mostram onde e como a desigualdade acontece, e ajudam a dar visibilidade ao problema.</li>
+                        </ul>
                     </li>
                     <li class="rounded-[14px] border-2 border-borda bg-rosa-bem-claro/50 p-6">
                         <span class="mb-4 grid size-11 place-items-center rounded-full bg-rosa-escuro text-lg font-bold text-white" aria-hidden="true">3</span>
                         <h3 class="mb-2 text-[1.2rem] font-bold text-rosa-mais-escuro">Acompanhe</h3>
-                        <p class="text-texto-suave">Consulte a sua denúncia e veja se ela já foi atendida ou ainda está em análise.</p>
+                        <p class="text-texto-suave">Use <strong class="text-rosa-escuro">Consultar denúncia</strong>, no menu lateral, para ver a situação do seu relato.</p>
+                        <ul class="mt-3 grid list-disc gap-1.5 pl-5 text-[0.93rem] text-texto-suave marker:text-rosa-escuro">
+                            <li><strong class="text-texto">Em análise:</strong> a equipe ainda está avaliando o relato.</li>
+                            <li><strong class="text-texto">Atendida:</strong> o relato já foi analisado pela equipe.</li>
+                        </ul>
                     </li>
                 </ol>
+
+                <!-- Dicas práticas para quem vai escrever o relato -->
+                <div class="mt-8 grid gap-6 md:grid-cols-2">
+                    <div class="rounded-[14px] border-l-6 border-rosa-escuro bg-white p-6 shadow-cartao">
+                        <h3 class="mb-3 text-[1.15rem] font-bold text-rosa-mais-escuro">Dicas para escrever o relato</h3>
+                        <ul class="grid list-disc gap-1.5 pl-5 text-[0.95rem] text-texto-suave marker:text-rosa-escuro">
+                            <li><strong class="text-texto">O que aconteceu:</strong> as palavras e atitudes de que você se lembra.</li>
+                            <li><strong class="text-texto">Quem praticou:</strong> o cargo ou a função já ajudam; citar nomes não é obrigatório.</li>
+                            <li><strong class="text-texto">Com que frequência:</strong> se foi uma vez só ou se se repete, e desde quando.</li>
+                            <li><strong class="text-texto">Quem viu:</strong> se alguém presenciou ou passou pela mesma situação.</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-[14px] border-l-6 border-rosa-escuro bg-white p-6 shadow-cartao">
+                        <h3 class="mb-3 text-[1.15rem] font-bold text-rosa-mais-escuro">Proteja a sua privacidade</h3>
+                        <ul class="grid list-disc gap-1.5 pl-5 text-[0.95rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Prefira o seu celular ou computador pessoal. Aparelhos e redes Wi-Fi da empresa podem ser monitorados.</li>
+                            <li>Use uma janela anônima do navegador e feche-a ao terminar.</li>
+                            <li>Evite detalhes que só você saberia, se tiver medo de ser reconhecida.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Perguntas frequentes: <details> abre e fecha sem JavaScript -->
+                <h3 class="mt-12 mb-4 text-center text-[1.3rem] font-bold text-rosa-mais-escuro">Perguntas frequentes</h3>
+                <div class="mx-auto grid max-w-3xl gap-3">
+                    <details class="group rounded-[14px] border-2 border-borda bg-white">
+                        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-bold text-rosa-mais-escuro [&::-webkit-details-marker]:hidden">
+                            A denúncia no Voz Delas vale como boletim de ocorrência?
+                            <span class="text-2xl leading-none text-rosa-escuro transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
+                        </summary>
+                        <p class="px-5 pb-5 text-texto-suave">Não. O Voz Delas registra e dá visibilidade ao seu relato, mas não abre investigação nem processo. Para isso, procure também um dos <a href="#ajuda" class="font-semibold text-rosa-escuro underline">canais oficiais</a>, como a Delegacia da Mulher, o Ministério Público do Trabalho ou a Defensoria Pública.</p>
+                    </details>
+                    <details class="group rounded-[14px] border-2 border-borda bg-white">
+                        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-bold text-rosa-mais-escuro [&::-webkit-details-marker]:hidden">
+                            A empresa ou outra pessoa vai saber que fui eu?
+                            <span class="text-2xl leading-none text-rosa-escuro transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
+                        </summary>
+                        <p class="px-5 pb-5 text-texto-suave">O formulário não pede nome, e-mail nem documento, e só a equipe administradora lê os relatos. Mesmo assim, detalhes muito específicos podem dar pistas de quem você é. Conte o que for preciso e o que você se sentir à vontade para contar.</p>
+                    </details>
+                    <details class="group rounded-[14px] border-2 border-borda bg-white">
+                        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-bold text-rosa-mais-escuro [&::-webkit-details-marker]:hidden">
+                            Posso relatar algo que aconteceu há muito tempo?
+                            <span class="text-2xl leading-none text-rosa-escuro transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
+                        </summary>
+                        <p class="px-5 pb-5 text-texto-suave">Sim, a data é opcional. Fique atenta, porém, aos prazos da Justiça: em casos trabalhistas, a ação deve ser proposta em até <strong class="text-texto">2 anos após o fim do contrato</strong>, e é possível cobrar direitos dos <strong class="text-texto">últimos 5 anos</strong>.</p>
+                    </details>
+                    <details class="group rounded-[14px] border-2 border-borda bg-white">
+                        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-bold text-rosa-mais-escuro [&::-webkit-details-marker]:hidden">
+                            Presenciei uma situação, mas não fui eu a vítima. Posso relatar?
+                            <span class="text-2xl leading-none text-rosa-escuro transition-transform duration-200 group-open:rotate-45" aria-hidden="true">+</span>
+                        </summary>
+                        <p class="px-5 pb-5 text-texto-suave">Pode, sim. O relato de quem viu também mostra que o problema existe e ajuda a proteger outras mulheres.</p>
+                    </details>
+                </div>
             </div>
         </section>
 
@@ -142,24 +208,92 @@ http://127.0.0.1:5500/Projeto_vozdelas/login.html
                 <h2 id="titulo-direitos" class="mb-2 text-center text-[1.9rem] font-bold text-rosa-escuro">Seus direitos</h2>
                 <p class="mx-auto mb-10 max-w-xl text-center text-texto-suave">Conhecer a lei é o primeiro passo para reconhecer uma situação de discriminação.</p>
 
-                <div class="grid gap-6 sm:grid-cols-2">
+                <div class="grid gap-6 md:grid-cols-2">
                     <article class="rounded-[14px] border-l-6 border-rosa-escuro bg-white p-6 shadow-cartao">
+                        <p class="mb-3 inline-block rounded-full bg-rosa-bem-claro px-3 py-0.5 text-[0.8rem] font-semibold text-rosa-escuro">Lei nº 14.611/2023 &middot; CLT, art. 461</p>
                         <h3 class="mb-2 text-[1.15rem] font-bold text-rosa-mais-escuro">Salário igual para trabalho igual</h3>
-                        <p class="text-texto-suave">A Lei nº 14.611/2023 garante igualdade salarial e de critérios de remuneração entre mulheres e homens que exercem a mesma função.</p>
+                        <p class="text-texto-suave">Mulheres e homens na mesma função têm direito ao mesmo salário e aos mesmos critérios de remuneração, como bônus, comissões e promoções.</p>
+                        <ul class="mt-3 grid list-disc gap-1.5 pl-5 text-[0.93rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Empresas com 100 ou mais empregados devem publicar, duas vezes por ano, um relatório de transparência salarial.</li>
+                            <li>Se houver diferença por discriminação, a empresa paga o que deve e uma multa de 10 vezes o novo salário (o dobro, se reincidir).</li>
+                            <li>Também é possível pedir indenização por danos morais.</li>
+                        </ul>
                     </article>
                     <article class="rounded-[14px] border-l-6 border-rosa-escuro bg-white p-6 shadow-cartao">
+                        <p class="mb-3 inline-block rounded-full bg-rosa-bem-claro px-3 py-0.5 text-[0.8rem] font-semibold text-rosa-escuro">Lei nº 9.029/1995 &middot; CLT, art. 373-A</p>
                         <h3 class="mb-2 text-[1.15rem] font-bold text-rosa-mais-escuro">Sem discriminação na contratação</h3>
-                        <p class="text-texto-suave">A Lei nº 9.029/1995 proíbe exigir teste de gravidez e qualquer prática discriminatória por sexo ou estado civil para contratar ou manter alguém no emprego.</p>
+                        <p class="text-texto-suave">Ninguém pode ser recusada, demitida ou deixar de ser promovida por causa de sexo, estado civil, gravidez ou situação familiar.</p>
+                        <ul class="mt-3 grid list-disc gap-1.5 pl-5 text-[0.93rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Exigir teste ou atestado de gravidez ou de esterilização é crime, com pena de 1 a 2 anos de detenção e multa.</li>
+                            <li>Anúncios de vaga não podem indicar preferência por sexo, salvo quando a atividade realmente exigir.</li>
+                            <li>Na demissão discriminatória, a trabalhadora escolhe entre voltar ao emprego, recebendo o período afastada, ou receber esse período em dobro.</li>
+                        </ul>
                     </article>
                     <article class="rounded-[14px] border-l-6 border-rosa-escuro bg-white p-6 shadow-cartao">
+                        <p class="mb-3 inline-block rounded-full bg-rosa-bem-claro px-3 py-0.5 text-[0.8rem] font-semibold text-rosa-escuro">Código Penal, arts. 216-A e 215-A</p>
                         <h3 class="mb-2 text-[1.15rem] font-bold text-rosa-mais-escuro">Assédio sexual é crime</h3>
-                        <p class="text-texto-suave">O artigo 216-A do Código Penal prevê pena para quem usa a posição de chefia para constranger alguém com o objetivo de obter vantagem sexual.</p>
+                        <p class="text-texto-suave">Constranger alguém para obter vantagem ou favor sexual, usando a posição de chefe ou superior, tem pena de 1 a 2 anos de detenção.</p>
+                        <ul class="mt-3 grid list-disc gap-1.5 pl-5 text-[0.93rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Não é preciso haver contato físico: propostas, insinuações e chantagens também podem configurar o crime.</li>
+                            <li>Toques, beijos ou outros atos sexuais sem consentimento, vindos de qualquer pessoa, inclusive colegas, são importunação sexual, com pena de 1 a 5 anos de reclusão.</li>
+                        </ul>
                     </article>
                     <article class="rounded-[14px] border-l-6 border-rosa-escuro bg-white p-6 shadow-cartao">
+                        <p class="mb-3 inline-block rounded-full bg-rosa-bem-claro px-3 py-0.5 text-[0.8rem] font-semibold text-rosa-escuro">CLT, art. 483</p>
+                        <h3 class="mb-2 text-[1.15rem] font-bold text-rosa-mais-escuro">Assédio moral também tem consequências</h3>
+                        <p class="text-texto-suave">Humilhações repetidas, gritos, isolamento, metas impossíveis ou piadas sobre ser mulher ou mãe tornam o ambiente de trabalho hostil.</p>
+                        <ul class="mt-3 grid list-disc gap-1.5 pl-5 text-[0.93rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Pode gerar indenização por danos morais na Justiça do Trabalho.</li>
+                            <li>Permite pedir a <strong class="text-texto">rescisão indireta</strong>: a trabalhadora encerra o contrato por falta grave da empresa e recebe tudo como se tivesse sido demitida sem justa causa.</li>
+                        </ul>
+                    </article>
+                    <article class="rounded-[14px] border-l-6 border-rosa-escuro bg-white p-6 shadow-cartao">
+                        <p class="mb-3 inline-block rounded-full bg-rosa-bem-claro px-3 py-0.5 text-[0.8rem] font-semibold text-rosa-escuro">Lei nº 14.457/2022</p>
                         <h3 class="mb-2 text-[1.15rem] font-bold text-rosa-mais-escuro">Empresas devem prevenir o assédio</h3>
-                        <p class="text-texto-suave">A Lei nº 14.457/2022 obriga empresas com CIPA a adotar regras de conduta, treinamentos e canais para receber denúncias de assédio.</p>
+                        <p class="text-texto-suave">Empresas obrigadas a ter CIPA (Comissão Interna de Prevenção de Acidentes e de Assédio) precisam agir contra o assédio sexual e outras violências no trabalho.</p>
+                        <ul class="mt-3 grid list-disc gap-1.5 pl-5 text-[0.93rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Ter regras de conduta sobre assédio, divulgadas a todos os empregados.</li>
+                            <li>Manter um canal de denúncias que garanta o anonimato de quem denuncia, com apuração dos fatos e punição dos responsáveis.</li>
+                            <li>Fazer treinamentos sobre o tema pelo menos uma vez a cada 12 meses.</li>
+                        </ul>
+                    </article>
+                    <article class="rounded-[14px] border-l-6 border-rosa-escuro bg-white p-6 shadow-cartao">
+                        <p class="mb-3 inline-block rounded-full bg-rosa-bem-claro px-3 py-0.5 text-[0.8rem] font-semibold text-rosa-escuro">Constituição (ADCT, art. 10) &middot; CLT, arts. 392 e 396</p>
+                        <h3 class="mb-2 text-[1.15rem] font-bold text-rosa-mais-escuro">Proteção à gestante e à mãe</h3>
+                        <p class="text-texto-suave">A gravidez não pode ser motivo de demissão nem de perda de direitos.</p>
+                        <ul class="mt-3 grid list-disc gap-1.5 pl-5 text-[0.93rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Estabilidade desde a confirmação da gravidez até 5 meses após o parto, mesmo que a empresa não soubesse da gravidez.</li>
+                            <li>Licença-maternidade de 120 dias com salário (180 dias nas empresas do programa Empresa Cidadã).</li>
+                            <li>Dispensa do trabalho para ao menos 6 consultas e exames do pré-natal, e dois intervalos de meia hora por dia para amamentar até o bebê completar 6 meses.</li>
+                        </ul>
                     </article>
                 </div>
+
+                <!-- Provas: o que guardar antes mesmo de decidir denunciar -->
+                <div class="mt-8 rounded-[14px] border-t-6 border-rosa-escuro bg-white p-6 shadow-cartao sm:p-8">
+                    <h3 class="mb-1 text-[1.25rem] font-bold text-rosa-mais-escuro">Guarde provas, mesmo antes de decidir denunciar</h3>
+                    <p class="mb-5 text-texto-suave">Elas fortalecem o seu relato em qualquer canal, do Voz Delas à Justiça.</p>
+                    <ul class="grid gap-4 sm:grid-cols-2">
+                        <li class="rounded-[10px] bg-rosa-bem-claro/60 p-4">
+                            <strong class="mb-1 block text-rosa-escuro">Anote tudo</strong>
+                            <span class="text-[0.93rem] text-texto-suave">Data, hora, local, o que foi dito ou feito e quem estava por perto. Escreva logo, enquanto a memória está fresca.</span>
+                        </li>
+                        <li class="rounded-[10px] bg-rosa-bem-claro/60 p-4">
+                            <strong class="mb-1 block text-rosa-escuro">Salve mensagens e áudios</strong>
+                            <span class="text-[0.93rem] text-texto-suave">Prints com data e nome visíveis, e-mails e áudios. Gravar uma conversa da qual você participa é aceito como prova.</span>
+                        </li>
+                        <li class="rounded-[10px] bg-rosa-bem-claro/60 p-4">
+                            <strong class="mb-1 block text-rosa-escuro">Reúna documentos</strong>
+                            <span class="text-[0.93rem] text-texto-suave">Holerites, avaliações e comunicados que mostrem diferenças de salário ou de tratamento. Guarde cópias fora dos aparelhos da empresa.</span>
+                        </li>
+                        <li class="rounded-[10px] bg-rosa-bem-claro/60 p-4">
+                            <strong class="mb-1 block text-rosa-escuro">Identifique testemunhas</strong>
+                            <span class="text-[0.93rem] text-texto-suave">Colegas que viram o que aconteceu, ou que passaram pelo mesmo, podem confirmar o seu relato.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="mx-auto mt-6 max-w-2xl text-center text-[0.85rem] text-texto-suave">Estas informações são um resumo para orientação e não substituem o atendimento jurídico. Para analisar o seu caso, procure a Defensoria Pública, o sindicato da sua categoria ou uma advogada de confiança.</p>
             </div>
         </section>
 
@@ -169,28 +303,77 @@ http://127.0.0.1:5500/Projeto_vozdelas/login.html
                 <h2 id="titulo-ajuda" class="mb-2 text-center text-[1.9rem] font-bold text-rosa-escuro">Onde buscar ajuda</h2>
                 <p class="mx-auto mb-10 max-w-xl text-center text-texto-suave">O Voz Delas complementa, mas não substitui, os canais oficiais de atendimento.</p>
 
-                <ul class="grid gap-6 sm:grid-cols-2">
-                    <li class="rounded-[14px] border-2 border-borda p-6 text-center">
-                        <p class="text-[2.4rem] leading-none font-bold text-rosa-escuro">180</p>
+                <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <li class="flex flex-col rounded-[14px] border-2 border-borda p-6">
+                        <div class="flex items-center justify-between gap-3">
+                            <p class="text-[2.4rem] leading-none font-bold text-rosa-escuro">180</p>
+                            <span class="rounded-full bg-rosa-bem-claro px-3 py-0.5 text-[0.8rem] font-semibold text-rosa-escuro">24 horas</span>
+                        </div>
                         <h3 class="mt-3 mb-1 font-bold">Central de Atendimento à Mulher</h3>
-                        <p class="text-[0.92rem] text-texto-suave">Ligação gratuita e sigilosa, 24 horas por dia.</p>
+                        <p class="text-[0.92rem] text-texto-suave">Orienta sobre direitos, indica a rede de apoio mais próxima e recebe denúncias de violência contra a mulher.</p>
+                        <ul class="mt-4 grid list-disc gap-1 border-t border-borda pt-4 pl-5 text-[0.88rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Ligação gratuita e sigilosa, inclusive em fins de semana e feriados.</li>
+                            <li>Também atende pelo WhatsApp: <strong class="text-texto">(61) 9610-0180</strong>.</li>
+                            <li>Você pode ligar sem se identificar.</li>
+                        </ul>
                     </li>
-                    <li class="rounded-[14px] border-2 border-borda p-6 text-center">
-                        <p class="text-[2.4rem] leading-none font-bold text-rosa-escuro">190</p>
+                    <li class="flex flex-col rounded-[14px] border-2 border-borda p-6">
+                        <div class="flex items-center justify-between gap-3">
+                            <p class="text-[2.4rem] leading-none font-bold text-rosa-escuro">190</p>
+                            <span class="rounded-full bg-rosa-escuro px-3 py-0.5 text-[0.8rem] font-semibold text-white">Emergência</span>
+                        </div>
                         <h3 class="mt-3 mb-1 font-bold">Polícia Militar</h3>
-                        <p class="text-[0.92rem] text-texto-suave">Para emergências e situações de risco imediato.</p>
+                        <p class="text-[0.92rem] text-texto-suave">Para quando a violência está acontecendo agora ou há risco imediato à sua segurança.</p>
+                        <ul class="mt-4 grid list-disc gap-1 border-t border-borda pt-4 pl-5 text-[0.88rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Ligação gratuita de qualquer telefone, mesmo sem crédito.</li>
+                            <li>Diga o endereço logo no início da ligação.</li>
+                            <li>Se não puder falar, peça a alguém de confiança que ligue por você.</li>
+                        </ul>
                     </li>
-                    <li class="rounded-[14px] border-2 border-borda p-6 text-center">
+                    <li class="flex flex-col rounded-[14px] border-2 border-borda p-6">
                         <p class="text-[2.4rem] leading-none font-bold text-rosa-escuro">MPT</p>
                         <h3 class="mt-3 mb-1 font-bold">Ministério Público do Trabalho</h3>
-                        <p class="text-[0.92rem] text-texto-suave">Recebe denúncias de discriminação e assédio no ambiente de trabalho.</p>
+                        <p class="text-[0.92rem] text-texto-suave">Investiga empresas por discriminação, diferença salarial e assédio, principalmente quando atingem várias trabalhadoras.</p>
+                        <ul class="mt-4 grid list-disc gap-1 border-t border-borda pt-4 pl-5 text-[0.88rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Denúncia pela internet, no site <strong class="text-texto">mpt.mp.br</strong>, com opção de sigilo dos seus dados.</li>
+                            <li>Também atende nas procuradorias regionais.</li>
+                            <li>Pode obrigar a empresa a mudar suas práticas, por acordo (TAC) ou na Justiça.</li>
+                        </ul>
                     </li>
-                    <li class="rounded-[14px] border-2 border-borda p-6 text-center">
+                    <li class="flex flex-col rounded-[14px] border-2 border-borda p-6">
                         <p class="text-[2.4rem] leading-none font-bold text-rosa-escuro">DEAM</p>
                         <h3 class="mt-3 mb-1 font-bold">Delegacia da Mulher</h3>
-                        <p class="text-[0.92rem] text-texto-suave">Atendimento especializado para registrar ocorrências.</p>
+                        <p class="text-[0.92rem] text-texto-suave">Registra o boletim de ocorrência quando há crime, como assédio sexual, importunação, ameaça ou agressão.</p>
+                        <ul class="mt-4 grid list-disc gap-1 border-t border-borda pt-4 pl-5 text-[0.88rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Onde não houver DEAM, qualquer delegacia deve registrar a ocorrência.</li>
+                            <li>Em muitos estados, o boletim também pode ser feito pela delegacia virtual.</li>
+                            <li>Em casos de violência doméstica, pede medidas protetivas (Lei Maria da Penha).</li>
+                        </ul>
+                    </li>
+                    <li class="flex flex-col rounded-[14px] border-2 border-borda p-6">
+                        <p class="text-[2.4rem] leading-none font-bold text-rosa-escuro">Defensoria</p>
+                        <h3 class="mt-3 mb-1 font-bold">Defensoria Pública</h3>
+                        <p class="text-[0.92rem] text-texto-suave">Orientação e defesa jurídica gratuitas para quem não pode pagar advogado.</p>
+                        <ul class="mt-4 grid list-disc gap-1 border-t border-borda pt-4 pl-5 text-[0.88rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Analisa o seu caso e pode acompanhá-lo na Justiça.</li>
+                            <li>Muitas têm núcleos especializados na defesa da mulher.</li>
+                            <li>Procure a unidade da sua cidade ou o site da Defensoria do seu estado.</li>
+                        </ul>
+                    </li>
+                    <li class="flex flex-col rounded-[14px] border-2 border-borda p-6">
+                        <p class="text-[2.4rem] leading-none font-bold text-rosa-escuro">Sindicato</p>
+                        <h3 class="mt-3 mb-1 font-bold">Sindicato da sua categoria</h3>
+                        <p class="text-[0.92rem] text-texto-suave">Orienta a trabalhadora e pode cobrar da empresa, em nome de toda a categoria, o fim de práticas discriminatórias.</p>
+                        <ul class="mt-4 grid list-disc gap-1 border-t border-borda pt-4 pl-5 text-[0.88rem] text-texto-suave marker:text-rosa-escuro">
+                            <li>Muitos oferecem atendimento jurídico para ações trabalhistas.</li>
+                            <li>Para saber qual é o seu, pergunte ao RH ou consulte a convenção coletiva da sua categoria.</li>
+                        </ul>
                     </li>
                 </ul>
+
+                <p class="mx-auto mt-8 max-w-2xl rounded-[10px] bg-rosa-bem-claro px-5 py-4 text-center text-texto-suave">
+                    <strong class="text-rosa-escuro">Não sabe por onde começar?</strong> Ligue <strong class="text-rosa-escuro">180</strong>: a central escuta, orienta e indica o serviço mais próximo de você.
+                </p>
             </div>
         </section>
 

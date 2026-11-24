@@ -9,6 +9,7 @@
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-xl: 36rem;
+    --container-2xl: 42rem;
     --container-3xl: 48rem;
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
@@ -250,8 +251,20 @@
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
   .mt-5 {
     margin-top: calc(var(--spacing) * 5);
+  }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
+  }
+  .mt-12 {
+    margin-top: calc(var(--spacing) * 12);
   }
   .mb-1 {
     margin-bottom: var(--spacing);
@@ -331,6 +344,9 @@
   .w-full {
     width: 100%;
   }
+  .max-w-2xl {
+    max-width: var(--container-2xl);
+  }
   .max-w-3xl {
     max-width: var(--container-3xl);
   }
@@ -370,6 +386,12 @@
   }
   .scroll-mt-28 {
     scroll-margin-top: calc(var(--spacing) * 28);
+  }
+  .list-disc {
+    list-style-type: disc;
+  }
+  .list-none {
+    list-style-type: none;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -458,6 +480,10 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
   .border-t-6 {
     border-top-style: var(--tw-border-style);
     border-top-width: 6px;
@@ -488,6 +514,12 @@
       background-color: color-mix(in oklab, var(--color-rosa-bem-claro) 50%, transparent);
     }
   }
+  .bg-rosa-bem-claro\/60 {
+    background-color: color-mix(in srgb, #fce4ec 60%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-rosa-bem-claro) 60%, transparent);
+    }
+  }
   .bg-rosa-claro {
     background-color: var(--color-rosa-claro);
   }
@@ -502,6 +534,9 @@
   }
   .object-cover {
     object-fit: cover;
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
@@ -529,6 +564,9 @@
   }
   .px-\[5\%\] {
     padding-inline: 5%;
+  }
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * 0.5);
   }
   .py-1 {
     padding-block: var(--spacing);
@@ -569,11 +607,20 @@
   .py-14 {
     padding-block: calc(var(--spacing) * 14);
   }
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
+  }
   .pb-0\.5 {
     padding-bottom: calc(var(--spacing) * 0.5);
   }
+  .pb-5 {
+    padding-bottom: calc(var(--spacing) * 5);
+  }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
+  }
+  .pl-5 {
+    padding-left: calc(var(--spacing) * 5);
   }
   .pl-8\.5 {
     padding-left: calc(var(--spacing) * 8.5);
@@ -599,6 +646,9 @@
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
+  .text-\[0\.8rem\] {
+    font-size: 0.8rem;
+  }
   .text-\[0\.9rem\] {
     font-size: 0.9rem;
   }
@@ -610,6 +660,9 @@
   }
   .text-\[0\.92rem\] {
     font-size: 0.92rem;
+  }
+  .text-\[0\.93rem\] {
+    font-size: 0.93rem;
   }
   .text-\[0\.95rem\] {
     font-size: 0.95rem;
@@ -637,6 +690,9 @@
   }
   .text-\[1\.15rem\] {
     font-size: 1.15rem;
+  }
+  .text-\[1\.25rem\] {
+    font-size: 1.25rem;
   }
   .text-\[2\.4rem\] {
     font-size: 2.4rem;
@@ -730,6 +786,11 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .transition-transform {
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
   .duration-200 {
     --tw-duration: 200ms;
     transition-duration: 200ms;
@@ -759,8 +820,23 @@
   .fundo-rosa {
     background: radial-gradient(circle at 10% 10%, var(--color-rosa-claro) 0, transparent 40%), radial-gradient(circle at 90% 90%, var(--color-rosa-claro) 0, transparent 35%), var(--color-rosa-bem-claro);
   }
+  :is(:where(.group):is([open], :popover-open, :open) .group-open\:rotate-45) {
+    rotate: 45deg;
+  }
   :is(:where(.peer):target ~ .peer-target\:hidden) {
     display: none;
+  }
+  .marker\:text-rosa-escuro ::marker {
+    color: var(--color-rosa-escuro);
+  }
+  .marker\:text-rosa-escuro::marker {
+    color: var(--color-rosa-escuro);
+  }
+  .marker\:text-rosa-escuro ::-webkit-details-marker {
+    color: var(--color-rosa-escuro);
+  }
+  .marker\:text-rosa-escuro::-webkit-details-marker {
+    color: var(--color-rosa-escuro);
   }
   .placeholder\:text-placeholder::placeholder {
     color: var(--color-placeholder);
@@ -952,6 +1028,9 @@
     .sm\:gap-5 {
       gap: calc(var(--spacing) * 5);
     }
+    .sm\:p-8 {
+      padding: calc(var(--spacing) * 8);
+    }
     .sm\:px-3\.5 {
       padding-inline: calc(var(--spacing) * 3.5);
     }
@@ -1039,6 +1118,14 @@
     .md\:text-\[2\.6rem\] {
       font-size: 2.6rem;
     }
+  }
+  @media (width >= 64rem) {
+    .lg\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .\[\&\:\:-webkit-details-marker\]\:hidden::-webkit-details-marker {
+    display: none;
   }
 }
 @property --tw-translate-x {
